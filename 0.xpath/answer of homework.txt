@@ -1,0 +1,16 @@
+课间
+2. //a[descendant::span[text()='高速下载']]/preceding-sibling::a[last()-2]/descendant::span[text()='下载']
+
+3. //a[ancestor::div[@class='subitem'] and text()='手机']
+
+4. first: //div[contains(@id, 'product_')][position()<2]/descendant::a[text()='删除']
+   last:  //div[contains(@id, 'product_')][last()]/descendant::a[text()='删除']
+
+5. //li[descendant::div[contains(text(), '陆尧')]][last()-1]/a/div[position()<2]
+
+课后
+1. //a[contains(text(), '- Web Browser Automation')]
+
+2. //a[contains(text(), 'selenium-server-2.39.0.zip')]/parent::td/preceding-sibling::td/a
+
+3. //div[contains(text(), '的相关搜索')]/following-sibling::div[last()]/div[last()]/p[last()]
