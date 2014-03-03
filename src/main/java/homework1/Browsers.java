@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class Browsers {
 
@@ -21,6 +22,7 @@ public class Browsers {
 	public Browsers(BrowsersType browserstype){
 		switch(browserstype){
 		    case firefox:
+		    	System.setProperty("webdriver.firefox.bin", "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		    	File firebug = new File(projectpath+"/tool/firebug-1.12.1-fx.xpi");
 			    File firepath = new File(projectpath+"/tool/firepath-0.9.7-fx.xpi");
 				firefoxprofile =  new FirefoxProfile();
@@ -29,7 +31,6 @@ public class Browsers {
 					firefoxprofile.addExtension(firepath);
 					firefoxprofile.setPreference("webdriver.accept.untrusted.certs", "true"); 
 					firefoxprofile.setPreference("extensions.firebug.currentVersion", "1.12.1");
-					System.setProperty("webdriver.firefox.bin", "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -52,6 +53,10 @@ public class Browsers {
 				//capabilities.setCapability("chrome.switches", Arrays.asList("--proxy-server=http://your-proxy-domain:4443")); //…Ë÷√¥˙¿Ì
 				driver = new ChromeDriver(caps);
 				break;
+		    case safari:
+		    	caps = DesiredCapabilities.safari();
+		    	driver = new SafariDriver(caps);
+		    	break;
 		}
 		
 			

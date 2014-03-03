@@ -9,7 +9,7 @@ public class SmokeTest2 {
 	
 	@BeforeClass
 	public void start() {
-		Action.init("www.126.com", BrowsersType.ie);
+		Action.init("http://www.126.com", BrowsersType.chrome);
 	}
 	
 	@Test

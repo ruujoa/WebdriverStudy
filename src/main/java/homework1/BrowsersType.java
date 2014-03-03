@@ -1,5 +1,5 @@
 package homework1;
 
 public enum BrowsersType {
-    firefox,ie,chrome;
+    firefox,ie,chrome,safari;
 }

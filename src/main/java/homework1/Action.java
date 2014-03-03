@@ -20,7 +20,9 @@ public class Action {
 	}
 	
 	public static void login(String username, String password) {
+		driver.findElement(By.xpath("//*[@id='idInput']")).clear();
 		driver.findElement(By.xpath("//*[@id='idInput']")).sendKeys(username);
+		driver.findElement(By.xpath("//*[@id='pwdInput']")).clear();
 		driver.findElement(By.xpath("//*[@id='pwdInput']")).sendKeys(password);
 		driver.findElement(By.xpath("//*[@id='loginBtn']")).click();
 		try {
@@ -40,17 +42,6 @@ public class Action {
 		}
 	}
 	
-	/*
-	public static void to(String where, int index) {
-		driver.findElement(
-			By.xpath("//li[descendant::span[text()='" + where + "'] and position()=" + index + "]"));
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}*/
-	
 	public static boolean verify(String expected) {
 		return driver.findElement(
 			By.xpath("//*[@title='" + expected + "' and contains(@class, 'selected')]")).isDisplayed();
@@ -61,6 +52,6 @@ public class Action {
 	}
 	
 	public static void close() {
-		driver.close();
+		driver.quit();
 	}
 }
