@@ -1,5 +1,7 @@
 package homework1;
 
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,8 +10,10 @@ public class Action {
 	private static WebDriver driver;
 	private static Browsers browser;
 	
-	public static void init(String URL, BrowsersType type) {
-		browser = new Browsers(type);
+	public static void init(String URL) {
+		Random random = new Random(System.currentTimeMillis());
+		int i = random.nextInt(BrowsersType.values().length);
+		browser = new Browsers(BrowsersType.values()[i]);
 		driver = browser.driver;
 		driver.get(URL);
 		try {
