@@ -1,0 +1,20 @@
+<suite name="HomeWork_One">
+  <test name="SmokeTest" preserve-order="true">
+	<classes>
+      <class name="homework1.SmokeTest1">
+      	<methods>
+      	  <include name="start" />
+      	  <include name="toInbox" />
+      	  <include name="end" />
+      	</methods>
+      </class>
+      <class name="homework1.SmokeTest2">
+      	<methods>
+      	  <include name="start" />
+      	  <include name="toOutbox" />
+      	  <include name="end" />
+      	</methods>
+      </class> 
+    </classes>
+  </test> 
+</suite> 
