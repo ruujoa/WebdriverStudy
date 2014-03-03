@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_One" duration-ms="51707" started-at="2014-03-03T04:00:46Z" finished-at="2014-03-03T04:01:38Z">
+  <suite name="HomeWork_One" duration-ms="95840" started-at="2014-03-03T04:39:06Z" finished-at="2014-03-03T04:40:41Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="51707" started-at="2014-03-03T04:00:46Z" finished-at="2014-03-03T04:01:38Z">
+    <test name="SmokeTest" duration-ms="95840" started-at="2014-03-03T04:39:06Z" finished-at="2014-03-03T04:40:41Z">
       <class name="homework1.SmokeTest2">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest2@6b293ce0]" name="start" is-config="true" duration-ms="6846" started-at="2014-03-03T12:01:14Z" finished-at="2014-03-03T12:01:21Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest2@605bcd16]" name="start" is-config="true" duration-ms="16854" started-at="2014-03-03T12:39:38Z" finished-at="2014-03-03T12:39:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="toOutbox()[pri:0, instance:homework1.SmokeTest2@6b293ce0]" name="toOutbox" duration-ms="17576" started-at="2014-03-03T12:01:21Z" finished-at="2014-03-03T12:01:38Z">
+        <test-method status="PASS" signature="toOutbox()[pri:0, instance:homework1.SmokeTest2@605bcd16]" name="toOutbox" duration-ms="46876" started-at="2014-03-03T12:39:55Z" finished-at="2014-03-03T12:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toOutbox -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest2@6b293ce0]" name="end" is-config="true" duration-ms="40" started-at="2014-03-03T12:01:38Z" finished-at="2014-03-03T12:01:38Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest2@605bcd16]" name="end" is-config="true" duration-ms="38" started-at="2014-03-03T12:40:41Z" finished-at="2014-03-03T12:40:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
       </class> <!-- homework1.SmokeTest2 -->
       <class name="homework1.SmokeTest1">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest1@32932bc1]" name="start" is-config="true" duration-ms="8285" started-at="2014-03-03T12:00:46Z" finished-at="2014-03-03T12:00:55Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest1@5c1da5d7]" name="start" is-config="true" duration-ms="11086" started-at="2014-03-03T12:39:06Z" finished-at="2014-03-03T12:39:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="toInbox()[pri:0, instance:homework1.SmokeTest1@32932bc1]" name="toInbox" duration-ms="18887" started-at="2014-03-03T12:00:55Z" finished-at="2014-03-03T12:01:14Z">
+        <test-method status="PASS" signature="toInbox()[pri:0, instance:homework1.SmokeTest1@5c1da5d7]" name="toInbox" duration-ms="20902" started-at="2014-03-03T12:39:17Z" finished-at="2014-03-03T12:39:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toInbox -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest1@32932bc1]" name="end" is-config="true" duration-ms="46" started-at="2014-03-03T12:01:14Z" finished-at="2014-03-03T12:01:14Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest1@5c1da5d7]" name="end" is-config="true" duration-ms="40" started-at="2014-03-03T12:39:38Z" finished-at="2014-03-03T12:39:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

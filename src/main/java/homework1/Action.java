@@ -40,6 +40,7 @@ public class Action {
 		}
 	}
 	
+	/*
 	public static void to(String where, int index) {
 		driver.findElement(
 			By.xpath("//li[descendant::span[text()='" + where + "'] and position()=" + index + "]"));
@@ -48,7 +49,7 @@ public class Action {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	public static boolean verify(String expected) {
 		return driver.findElement(
