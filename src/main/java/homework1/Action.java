@@ -24,16 +24,25 @@ public class Action {
 		driver.findElement(By.xpath("//*[@id='pwdInput']")).sendKeys(password);
 		driver.findElement(By.xpath("//*[@id='loginBtn']")).click();
 		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void to(String where) {
+		driver.findElement(
+			By.xpath("//li[descendant::span[text()='" + where + "']]")).click();
+		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void to(String where, int index, String extra) {
+	public static void to(String where, int index) {
 		driver.findElement(
-			By.xpath("//li[descendant::span[text()='" + where + "'] " +
-					 "and position()=" + index + extra + "]")).click();
+			By.xpath("//li[descendant::span[text()='" + where + "'] and position()=" + index + "]"));
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

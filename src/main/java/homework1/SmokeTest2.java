@@ -15,7 +15,7 @@ public class SmokeTest2 {
 	@Test
 	public void toOutbox() {
 		Action.login("ruujoa1982", "luyao1982");
-		Action.to("已发送", 4, " and not(parent::ul[@style])");
+		Action.to("已发送");
 		Assert.assertTrue(Action.verify("已发送"));
 		Action.logout();
 	}

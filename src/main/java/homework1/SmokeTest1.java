@@ -15,7 +15,7 @@ public class SmokeTest1 {
 	@Test
 	public void toInbox() {
 		Action.login("ruujoa1982", "luyao1982");
-		Action.to("收件箱", 1, " and not(parent::ul[@style])");
+		Action.to("收件箱");
 		Assert.assertTrue(Action.verify("收件箱"));
 		Action.logout();
 	}
