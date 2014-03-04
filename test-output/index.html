@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-HomeWork_One">
-              <span class="suite-name border-passed">HomeWork_One</span>
+              <span class="suite-name border-failed">HomeWork_One</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-HomeWork_One" class="hide-methods failed suite-HomeWork_One"> (hide)</a> <!-- hide-methods failed suite-HomeWork_One -->
+                      <a href="#" panel-name="suite-HomeWork_One" class="show-methods failed suite-HomeWork_One"> (show)</a> <!-- show-methods failed suite-HomeWork_One -->
+                    </span>
+                    <div class="method-list-content failed suite-HomeWork_One">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork_One" title="homework1.SmokeTest2" hash-for-method="toOutbox">toOutbox</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-HomeWork_One -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,11 +116,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-HomeWork_One" title="homework1.SmokeTest1" hash-for-method="toInbox">toInbox</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork_One" title="homework1.SmokeTest2" hash-for-method="toOutbox">toOutbox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-HomeWork_One -->
@@ -121,6 +130,40 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-HomeWork_One" class="panel HomeWork_One">
+          <div class="suite-HomeWork_One-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">homework1.SmokeTest2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="toOutbox">
+                  </a> <!-- toOutbox -->
+                  <span class="method-name">toOutbox</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Could not find element: {&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;//*[@title=&apos;ÒÑ·¢ËÍ&apos; and contains(@class, &apos;selected&apos;)]&quot;} (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
+System info: host: &apos;luyao-PC&apos;, ip: &apos;192.168.22.136&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
+Session ID: null
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities [{platform=WINDOWS, cssSelectorsEnabled=true, javascriptEnabled=true, secureSsl=true, browserName=safari, takesScreenshot=true, version=5.1.7}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
+	at homework1.Action.verify(Action.java:62)
+	at homework1.SmokeTest2.toOutbox(SmokeTest2.java:19)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomeWork_One-class-failed -->
           <div class="suite-HomeWork_One-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -132,21 +175,6 @@
                   <a name="toInbox">
                   </a> <!-- toInbox -->
                   <span class="method-name">toInbox</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-HomeWork_One-class-passed -->
-          <div class="suite-HomeWork_One-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">homework1.SmokeTest2</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="toOutbox">
-                  </a> <!-- toOutbox -->
-                  <span class="method-name">toOutbox</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -218,18 +246,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'toOutbox')
-data.setCell(0, 2, 'homework1.SmokeTest2')
-data.setCell(0, 3, 42125);
+data.setCell(0, 1, 'toInbox')
+data.setCell(0, 2, 'homework1.SmokeTest1')
+data.setCell(0, 3, 32533);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'toInbox')
-data.setCell(1, 2, 'homework1.SmokeTest1')
-data.setCell(1, 3, 9683);
+data.setCell(1, 1, 'toOutbox')
+data.setCell(1, 2, 'homework1.SmokeTest2')
+data.setCell(1, 3, 8300);
 window.suiteTableData['HomeWork_One']= { tableData: data, tableDiv: 'times-div-HomeWork_One'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 51 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-HomeWork_One">
               </div> <!-- times-div-HomeWork_One -->
             </div> <!-- times-div -->
@@ -262,26 +290,28 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">toInbox</span>
-                <span class="method-start">5374 ms</span>
+                <span class="method-start">36387 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">end</span>
-                <span class="method-start">15059 ms</span>
+                <span class="method-start">68923 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">homework1.SmokeTest2</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">start</span>
-                <span class="method-start">15229 ms</span>
+                <span class="method-start">70529 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">toOutbox</span>
-                <span class="method-start">23149 ms</span>
+                <span class="method-start">76798 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">end</span>
-                <span class="method-start">65276 ms</span>
+                <span class="method-start">85113 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

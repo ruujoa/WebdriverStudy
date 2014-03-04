@@ -46,6 +46,18 @@ public class Action {
 		}
 	}
 	
+	public static void checkMail(String title, int index) {
+		driver.findElements(By
+			.xpath("//div[contains(@id,'_ContentDiv')]/descendant::div[contains(text(),'" + title + "')]"))
+			.get(index)
+			.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public static boolean verify(String expected) {
 		return driver.findElement(
 			By.xpath("//*[@title='" + expected + "' and contains(@class, 'selected')]")).isDisplayed();
