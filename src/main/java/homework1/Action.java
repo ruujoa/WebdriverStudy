@@ -97,7 +97,7 @@ public class Action {
 				return false;
 			}
 		} catch (NoSuchElementException e) {
-			System.out.println( "An exception#1 happened." );
+			System.out.println( "An exception#1 happened: " + e.getMessage() );
 		}
 		
 		sleep(2000);
@@ -107,7 +107,7 @@ public class Action {
 		try {
 			message = driver.findElement(By.xpath("//*[text()='·¢ËÍ³É¹¦']"));
 		} catch (NoSuchElementException e) {
-			System.out.println( "An exception#2 happened." );
+			System.out.println( "An exception#2 happened: " + e.getMessage() );
 			return false;
 		}
 		

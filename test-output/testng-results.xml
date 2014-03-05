@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_One" duration-ms="63735" started-at="2014-03-05T05:27:52Z" finished-at="2014-03-05T05:28:56Z">
+  <suite name="HomeWork_One" duration-ms="64083" started-at="2014-03-05T05:43:00Z" finished-at="2014-03-05T05:44:04Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="63735" started-at="2014-03-05T05:27:52Z" finished-at="2014-03-05T05:28:56Z">
+    <test name="SmokeTest" duration-ms="64083" started-at="2014-03-05T05:43:00Z" finished-at="2014-03-05T05:44:04Z">
       <class name="homework1.SmokeTest2">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="start" is-config="true" duration-ms="9902" started-at="2014-03-05T13:28:24Z" finished-at="2014-03-05T13:28:33Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="start" is-config="true" duration-ms="8297" started-at="2014-03-05T13:43:22Z" finished-at="2014-03-05T13:43:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="FAIL" signature="toOutbox()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="toOutbox" duration-ms="21137" started-at="2014-03-05T13:28:33Z" finished-at="2014-03-05T13:28:55Z">
+        <test-method status="FAIL" signature="toOutbox()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="toOutbox" duration-ms="26644" started-at="2014-03-05T13:43:31Z" finished-at="2014-03-05T13:43:57Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -53,21 +53,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toOutbox -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="end" is-config="true" duration-ms="1297" started-at="2014-03-05T13:28:55Z" finished-at="2014-03-05T13:28:56Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest2@5ff3cd32]" name="end" is-config="true" duration-ms="6615" started-at="2014-03-05T13:43:57Z" finished-at="2014-03-05T13:44:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
       </class> <!-- homework1.SmokeTest2 -->
       <class name="homework1.SmokeTest1">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="start" is-config="true" duration-ms="9108" started-at="2014-03-05T13:27:52Z" finished-at="2014-03-05T13:28:01Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="start" is-config="true" duration-ms="7367" started-at="2014-03-05T13:43:00Z" finished-at="2014-03-05T13:43:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="toInbox()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="toInbox" duration-ms="21016" started-at="2014-03-05T13:28:01Z" finished-at="2014-03-05T13:28:22Z">
+        <test-method status="PASS" signature="toInbox()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="toInbox" duration-ms="14949" started-at="2014-03-05T13:43:07Z" finished-at="2014-03-05T13:43:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- toInbox -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="end" is-config="true" duration-ms="1250" started-at="2014-03-05T13:28:22Z" finished-at="2014-03-05T13:28:24Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest1@d53b61e]" name="end" is-config="true" duration-ms="178" started-at="2014-03-05T13:43:22Z" finished-at="2014-03-05T13:43:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
