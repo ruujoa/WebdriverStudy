@@ -33,14 +33,13 @@ public class Action {
 		sleep(3000);
 	}
 	
-	public static void init(String URL, BrowsersType browserToExclude) {
+	public static void init(String URL, List<BrowsersType> browsersToExclude) {
 		Random random = new Random(System.currentTimeMillis());
-		int i = 0;
+		int i = 0; 
 		while(true) {
 			i = random.nextInt(BrowsersType.values().length);
-			if (BrowsersType.values()[i] != browserToExclude) {
-				break;
-			}
+			if (!browsersToExclude.contains(BrowsersType.values()[i])) break;
+			
 		}
 		browser = new Browsers(BrowsersType.values()[i]);
 		driver = browser.driver;

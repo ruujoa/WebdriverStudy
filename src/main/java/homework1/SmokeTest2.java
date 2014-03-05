@@ -11,10 +11,12 @@ import org.testng.annotations.Test;
 public class SmokeTest2 {
 	
 	private List<String> recipients = new ArrayList<String>();
+	private List<BrowsersType> browsersToExclude = new ArrayList<BrowsersType>();
 	
 	@BeforeClass
 	public void start() {
-		Action.init("http://www.126.com", BrowsersType.safari);
+		browsersToExclude.add(BrowsersType.safari);
+		Action.init("http://www.126.com", browsersToExclude);
 		recipients.add("yao3000vlove1999@hotmail.com");
 	}
 	

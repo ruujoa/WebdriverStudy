@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22618" started-at="2014-03-05T07:50:04Z" finished-at="2014-03-05T07:50:27Z">
+  <suite name="Default suite" duration-ms="21361" started-at="2014-03-05T08:42:22Z" finished-at="2014-03-05T08:42:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22618" started-at="2014-03-05T07:50:04Z" finished-at="2014-03-05T07:50:27Z">
+    <test name="Default test" duration-ms="21361" started-at="2014-03-05T08:42:22Z" finished-at="2014-03-05T08:42:43Z">
       <class name="homework1.SmokeTest3">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest3@43b64611]" name="start" is-config="true" duration-ms="18738" started-at="2014-03-05T15:50:04Z" finished-at="2014-03-05T15:50:23Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="start" is-config="true" duration-ms="17044" started-at="2014-03-05T16:42:22Z" finished-at="2014-03-05T16:42:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test()[pri:0, instance:homework1.SmokeTest3@43b64611]" name="test" duration-ms="3165" started-at="2014-03-05T15:50:23Z" finished-at="2014-03-05T15:50:26Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="test" duration-ms="3080" started-at="2014-03-05T16:42:39Z" finished-at="2014-03-05T16:42:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest3@43b64611]" name="end" is-config="true" duration-ms="695" started-at="2014-03-05T15:50:26Z" finished-at="2014-03-05T15:50:27Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="end" is-config="true" duration-ms="1222" started-at="2014-03-05T16:42:42Z" finished-at="2014-03-05T16:42:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
