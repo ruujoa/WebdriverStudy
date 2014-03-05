@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [HomeWork_One]">
-  <test name="SmokeTest(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="homework1.SmokeTest1">
-        <methods>
-          <include name="end"/>
-          <include name="start"/>
-        </methods>
-      </class> <!-- homework1.SmokeTest1 -->
       <class name="homework1.SmokeTest2">
         <methods>
           <include name="end"/>
@@ -17,5 +11,5 @@
         </methods>
       </class> <!-- homework1.SmokeTest2 -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
-</suite> <!-- Failed suite [HomeWork_One] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

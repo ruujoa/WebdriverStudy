@@ -14,7 +14,7 @@ public class SmokeTest2 {
 	
 	@BeforeClass
 	public void start() {
-		Action.init("http://www.126.com");
+		Action.init("http://www.126.com", BrowsersType.safari);
 		recipients.add("yao3000vlove1999@hotmail.com");
 	}
 	

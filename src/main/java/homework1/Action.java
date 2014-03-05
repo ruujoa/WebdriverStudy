@@ -33,6 +33,27 @@ public class Action {
 		sleep(3000);
 	}
 	
+	public static void init(String URL, BrowsersType browserToExclude) {
+		Random random = new Random(System.currentTimeMillis());
+		int i = 0;
+		while(true) {
+			i = random.nextInt(BrowsersType.values().length);
+			if (BrowsersType.values()[i] != browserToExclude) {
+				break;
+			}
+		}
+		browser = new Browsers(BrowsersType.values()[i]);
+		driver = browser.driver;
+		driver.get(URL);
+		sleep(3000);
+	}
+	
+	public static void testUE(String content) {
+		Actions actions = new Actions(driver);
+		actions.sendKeys(content).perform();
+		sleep(3000);
+	}
+	
 	public static void login(String username, String password) {
 		driver.findElement(By.xpath("//*[@id='idInput']")).clear();
 		driver.findElement(By.xpath("//*[@id='idInput']")).sendKeys(username);
