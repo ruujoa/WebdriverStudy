@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 05 11:01:15 CST 2014</td>
+<td>Started on:</td><td>Wed Mar 05 13:27:52 CST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>53 seconds (53278 ms)</td>
+<tr><td>Total time:</td><td>63 seconds (63735 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,44 +76,14 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='homework1.SmokeTest2.toOutbox()'><b>toOutbox</b><br>Test class: homework1.SmokeTest2</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Could not find element: {&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;//*[text()=&apos;发送成功&apos;]&quot;} (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
-System info: host: &apos;luyao-PC&apos;, ip: &apos;192.168.22.72&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Session ID: null
-Driver info: org.openqa.selenium.safari.SafariDriver
-Capabilities [{platform=WINDOWS, cssSelectorsEnabled=true, javascriptEnabled=true, secureSsl=true, browserName=safari, takesScreenshot=true, version=5.1.7}]
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
-	at homework1.Action.sendMail(Action.java:89)
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at homework1.SmokeTest2.toOutbox(SmokeTest2.java:24)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1699542850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1699542850'><pre>org.openqa.selenium.NoSuchElementException: Could not find element: {&quot;using&quot;:&quot;xpath&quot;,&quot;value&quot;:&quot;//*[text()=&apos;发送成功&apos;]&quot;} (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 21 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
-System info: host: &apos;luyao-PC&apos;, ip: &apos;192.168.22.72&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;
-Session ID: null
-Driver info: org.openqa.selenium.safari.SafariDriver
-Capabilities [{platform=WINDOWS, cssSelectorsEnabled=true, javascriptEnabled=true, secureSsl=true, browserName=safari, takesScreenshot=true, version=5.1.7}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:326)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:423)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:318)
-	at homework1.Action.sendMail(Action.java:89)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace340326603", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace340326603'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
 	at homework1.SmokeTest2.toOutbox(SmokeTest2.java:24)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
@@ -140,8 +110,8 @@ Capabilities [{platform=WINDOWS, cssSelectorsEnabled=true, javascriptEnabled=tru
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>20</td>
-<td>homework1.SmokeTest2@72d97267</td></tr>
+<td>21</td>
+<td>homework1.SmokeTest2@5ff3cd32</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -153,8 +123,8 @@ Capabilities [{platform=WINDOWS, cssSelectorsEnabled=true, javascriptEnabled=tru
 <tr>
 <td title='homework1.SmokeTest1.toInbox()'><b>toInbox</b><br>Test class: homework1.SmokeTest1</td>
 <td></td>
-<td>16</td>
-<td>homework1.SmokeTest1@7f24bed4</td></tr>
+<td>21</td>
+<td>homework1.SmokeTest1@d53b61e</td></tr>
 </table><p>
 </body>
 </html>

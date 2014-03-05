@@ -3,6 +3,12 @@
 <suite name="Failed suite [HomeWork_One]">
   <test name="SmokeTest(failed)">
     <classes>
+      <class name="homework1.SmokeTest1">
+        <methods>
+          <include name="end"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- homework1.SmokeTest1 -->
       <class name="homework1.SmokeTest2">
         <methods>
           <include name="end"/>
@@ -10,12 +16,6 @@
           <include name="toOutbox"/>
         </methods>
       </class> <!-- homework1.SmokeTest2 -->
-      <class name="homework1.SmokeTest1">
-        <methods>
-          <include name="end"/>
-          <include name="start"/>
-        </methods>
-      </class> <!-- homework1.SmokeTest1 -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [HomeWork_One] -->

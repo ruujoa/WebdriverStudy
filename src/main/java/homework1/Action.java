@@ -90,16 +90,14 @@ public class Action {
 			return false;
 		}
 		
-		WebElement prompt = null;
-		
 		try {
-			prompt = driver.findElement(By.xpath("//div[text()='发信验证']"));
+			WebElement prompt = driver.findElement(By.xpath("//div[text()='发信验证']"));
+			if (prompt.isDisplayed()) {
+				System.out.println( "There is a prompt." );
+				return false;
+			}
 		} catch (NoSuchElementException e) {
-			return false;
-		}
-		
-		if (prompt.isDisplayed()) {
-			return false;
+			System.out.println( "An exception#1 happened." );
 		}
 		
 		sleep(2000);
@@ -109,6 +107,7 @@ public class Action {
 		try {
 			message = driver.findElement(By.xpath("//*[text()='发送成功']"));
 		} catch (NoSuchElementException e) {
+			System.out.println( "An exception#2 happened." );
 			return false;
 		}
 		
