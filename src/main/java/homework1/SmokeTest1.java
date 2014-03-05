@@ -18,6 +18,7 @@ public class SmokeTest1 {
 		Action.to("收件箱");
 		Assert.assertTrue(Action.verify("收件箱"));
 		Action.checkMail("test", 0);
+		Assert.assertTrue(Action.verify("test"));
 		Action.logout();
 	}
 	
