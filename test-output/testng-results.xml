@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21361" started-at="2014-03-05T08:42:22Z" finished-at="2014-03-05T08:42:43Z">
+  <suite name="HomeWork_One" duration-ms="103707" started-at="2014-03-06T03:45:07Z" finished-at="2014-03-06T03:46:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21361" started-at="2014-03-05T08:42:22Z" finished-at="2014-03-05T08:42:43Z">
-      <class name="homework1.SmokeTest3">
-        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="start" is-config="true" duration-ms="17044" started-at="2014-03-05T16:42:22Z" finished-at="2014-03-05T16:42:39Z">
+    <test name="SmokeTest" duration-ms="103707" started-at="2014-03-06T03:45:07Z" finished-at="2014-03-06T03:46:51Z">
+      <class name="homework1.SmokeTest2">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest2@7a19b0d0]" name="start" is-config="true" duration-ms="12087" started-at="2014-03-06T11:45:59Z" finished-at="2014-03-06T11:46:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="test" duration-ms="3080" started-at="2014-03-05T16:42:39Z" finished-at="2014-03-05T16:42:42Z">
+        <test-method status="PASS" signature="toOutbox()[pri:0, instance:homework1.SmokeTest2@7a19b0d0]" name="toOutbox" duration-ms="25302" started-at="2014-03-06T11:46:11Z" finished-at="2014-03-06T11:46:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toOutbox -->
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest2@7a19b0d0]" name="end" is-config="true" duration-ms="1423" started-at="2014-03-06T11:46:37Z" finished-at="2014-03-06T11:46:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- homework1.SmokeTest2 -->
+      <class name="homework1.SmokeTest3">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest3@4ee993e]" name="start" is-config="true" duration-ms="8931" started-at="2014-03-06T11:46:38Z" finished-at="2014-03-06T11:46:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="test()[pri:0, instance:homework1.SmokeTest3@4ee993e]" name="test" duration-ms="3059" started-at="2014-03-06T11:46:47Z" finished-at="2014-03-06T11:46:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest3@3ff9ddb5]" name="end" is-config="true" duration-ms="1222" started-at="2014-03-05T16:42:42Z" finished-at="2014-03-05T16:42:43Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest3@4ee993e]" name="end" is-config="true" duration-ms="1225" started-at="2014-03-06T11:46:50Z" finished-at="2014-03-06T11:46:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
       </class> <!-- homework1.SmokeTest3 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="homework1.SmokeTest1">
+        <test-method status="PASS" signature="start()[pri:0, instance:homework1.SmokeTest1@2ca76650]" name="start" is-config="true" duration-ms="33064" started-at="2014-03-06T11:45:08Z" finished-at="2014-03-06T11:45:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="toInbox()[pri:0, instance:homework1.SmokeTest1@2ca76650]" name="toInbox" duration-ms="17445" started-at="2014-03-06T11:45:41Z" finished-at="2014-03-06T11:45:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toInbox -->
+        <test-method status="PASS" signature="end()[pri:0, instance:homework1.SmokeTest1@2ca76650]" name="end" is-config="true" duration-ms="1129" started-at="2014-03-06T11:45:58Z" finished-at="2014-03-06T11:45:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- homework1.SmokeTest1 -->
+    </test> <!-- SmokeTest -->
+  </suite> <!-- HomeWork_One -->
 </testng-results>
