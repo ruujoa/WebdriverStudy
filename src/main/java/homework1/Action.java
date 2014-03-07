@@ -1,5 +1,6 @@
 package homework1;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -14,6 +15,7 @@ public class Action {
 	
 	private static WebDriver driver;
 	private static Browsers browser;
+	private static final String OS_NAME = System.getProperty("os.name");
 	
 	
 	private static void sleep(long milliseconds) {
@@ -26,14 +28,17 @@ public class Action {
 	
 	public static void init(String URL) {
 		Random random = new Random(System.currentTimeMillis());
-		int i = random.nextInt(BrowsersType.values().length);
-		browser = new Browsers(BrowsersType.values()[i]);
+		List<BrowsersType> list = Arrays.asList(BrowsersType.values());
+		if ( !OS_NAME.contains("Windows") ) list.remove(BrowsersType.ie);
+		int i = random.nextInt(list.size());
+		browser = new Browsers(list.get(i));
 		driver = browser.driver;
 		driver.get(URL);
 		sleep(3000);
 	}
 	
 	public static void init(String URL, List<BrowsersType> browsersToExclude) {
+		if( !OS_NAME.contains("Windows") ) browsersToExclude.remove(BrowsersType.ie);
 		Random random = new Random(System.currentTimeMillis());
 		int i = 0; 
 		while(true) {
