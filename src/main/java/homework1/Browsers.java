@@ -18,11 +18,13 @@ public class Browsers {
 	private FirefoxProfile firefoxprofile = null;
 	private static DesiredCapabilities caps = null;
 	private String projectpath = System.getProperty("user.dir");
+	private final String OS_NAME = System.getProperty("os.name");
 	
 	public Browsers(BrowsersType browserstype){
 		switch(browserstype){
 		    case firefox:
-		    	System.setProperty("webdriver.firefox.bin", "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+		    	if ( OS_NAME.toUpperCase().contains("WINDOWS") )
+		    		System.setProperty("webdriver.firefox.bin", "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		    	File firebug = new File(projectpath+"/tool/firebug-1.12.1-fx.xpi");
 			    File firepath = new File(projectpath+"/tool/firepath-0.9.7-fx.xpi");
 				firefoxprofile =  new FirefoxProfile();
@@ -47,10 +49,16 @@ public class Browsers {
 		        driver = new InternetExplorerDriver(caps);
 		        break;
 		    case chrome:
-				System.setProperty("webdriver.chrome.driver", projectpath+"/tool/chromedriver.exe"); 
+		    	if ( OS_NAME.toUpperCase().contains("WINDOWS") ) {
+		    		System.setProperty("webdriver.chrome.driver", projectpath+"/tool/chromedriver.exe"); 
+		    	} else if ( OS_NAME.toUpperCase().contains("LINUX") ) {
+		    		System.setProperty("webdriver.chrome.driver", projectpath+"/tool/chromedriver"); 
+		    	} else {
+		    		System.setProperty("webdriver.chrome.driver", projectpath+"/tool/chromedriver_mac"); 
+		    	}
 				caps = DesiredCapabilities.chrome();
-				caps.setCapability("chrome.switches",Arrays.asList("--start-maximized"));  //最大化browser
-				//capabilities.setCapability("chrome.switches", Arrays.asList("--proxy-server=http://your-proxy-domain:4443")); //设置代理
+				caps.setCapability("chrome.switches",Arrays.asList("--start-maximized"));  //鏈�澶у寲browser
+				//capabilities.setCapability("chrome.switches", Arrays.asList("--proxy-server=http://your-proxy-domain:4443")); //璁剧疆浠ｇ悊
 				driver = new ChromeDriver(caps);
 				break;
 		    case safari:
