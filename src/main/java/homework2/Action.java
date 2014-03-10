@@ -18,12 +18,12 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Action {
 	
-	private static WebDriver driver;
-	private static Browsers browser;
-	private static final String OS_NAME = System.getProperty("os.name");
-	private static String projectpath = System.getProperty("user.dir");
-	private static Properties props = null; 
-	private static Wait wait = null;
+	private WebDriver driver;
+	private Browsers browser;
+	private final String OS_NAME = System.getProperty("os.name");
+	private String projectpath = System.getProperty("user.dir");
+	private Properties props = null; 
+	private Wait wait = null;
 	
 	public Action() {
 		props = new Properties();
@@ -36,7 +36,7 @@ public class Action {
 		}
 	}
 	
-	private static void sleep(long milliseconds) {
+	private void sleep(long milliseconds) {
 		try {
 			Thread.sleep(milliseconds);
 		} catch (InterruptedException e) {
@@ -44,7 +44,7 @@ public class Action {
 		}
 	}
 	
-	public static void init(String URL) {
+	public void init(String URL) {
 		Random random = new Random(System.currentTimeMillis());
 		List<BrowsersType> list = new ArrayList<BrowsersType>(Arrays.asList(BrowsersType.values()));
 		
@@ -60,7 +60,7 @@ public class Action {
 			   Integer.parseInt(props.getProperty("timeout")));
 	}
 	
-	public static void init(String URL, List<BrowsersType> browsersToExclude) {
+	public void init(String URL, List<BrowsersType> browsersToExclude) {
 		if( !OS_NAME.toUpperCase().contains("WINDOWS") ) browsersToExclude.add(BrowsersType.ie);
 		Random random = new Random(System.currentTimeMillis());
 		int i = 0; 
@@ -77,13 +77,13 @@ public class Action {
 				Integer.parseInt(props.getProperty("timeout")));
 	}
 	
-	public static void testUE(String content) {
+	public void testUE(String content) {
 		Actions actions = new Actions(driver);
 		actions.sendKeys(content).perform();
 		wait.waitFor(3000);
 	}
 	
-	public static void login(String username, String password) {
+	public void login(String username, String password) {
 		driver.findElement(By.xpath(props.getProperty("UsernameInput"))).clear();
 		driver.findElement(By.xpath(props.getProperty("UsernameInput"))).sendKeys(username);
 		driver.findElement(By.xpath(props.getProperty("PasswordInput"))).clear();
@@ -92,18 +92,18 @@ public class Action {
 		wait.waitForTitleIsDisplayed(props.getProperty("MainTitle"), Integer.parseInt(props.getProperty("timeout")));
 	}
 	
-	public static void to(String where) {
+	public void to(String where) {
 		driver.findElement(
 			By.xpath(props.getProperty("NavTree").replace("where", where))).click();
 		wait.waitFor(3000);
 	}
 	
-	public static int checkCountOfMails() {
+	public int checkCountOfMails() {
 		return driver.findElements(By
 			.xpath(props.getProperty("CountOfHaveBeenSent"))).size() - 1;
 	}
 	
-	public static int getCountFromPage() {
+	public int getCountFromPage() {
 		return Integer.parseInt(driver.findElements(By
 				.xpath(props.getProperty("CountOfHaveBeenSent")))
 				.get(0)
@@ -112,15 +112,15 @@ public class Action {
 				.trim());
 	}
 	
-	public static boolean sendMail(String title, String content, List<String> recipients) {
+	public boolean sendMail(String title, String content, List<String> recipients) {
 		Actions actions = new Actions(driver);
 		driver.findElement(By
-			.xpath("//*[text()='–¥ –≈']"))
+			.xpath("//*[text()='ÂÜô ‰ø°']"))
 			.click();
 		
 		for (String recipient : recipients) {
 			driver.findElement(By
-					.xpath("//a[text()=' ’º˛»À']/following-sibling::div/descendant::input[last()]"))
+					.xpath("//a[text()='Êî∂‰ª∂‰∫∫']/following-sibling::div/descendant::input[last()]"))
 					.sendKeys(recipient);
 			sleep(2000);
 			actions.sendKeys(Keys.TAB).perform();
@@ -129,7 +129,7 @@ public class Action {
 		sleep(2000);
 		
 		driver.findElement(By
-			.xpath("//*[text()='÷˜°°Ã‚']/following-sibling::div/descendant::input"))
+			.xpath("//*[text()='‰∏ª„ÄÄÈ¢ò']/following-sibling::div/descendant::input"))
 			.sendKeys(title);
 		
 		sleep(2000);
@@ -139,14 +139,14 @@ public class Action {
 		sleep(2000);
 		try {
 			driver.findElement(By
-					.xpath("//span[contains(text(), '∑¢ ÀÕ') and parent::div[@tabindex=2]]"))
+					.xpath("//span[contains(text(), 'Âèë ÈÄÅ') and parent::div[@tabindex=2]]"))
 					.click();
 		} catch (NoSuchElementException e) {
 			return false;
 		}
 		
 		try {
-			WebElement prompt = driver.findElement(By.xpath("//div[text()='∑¢–≈—È÷§']"));
+			WebElement prompt = driver.findElement(By.xpath("//div[text()='Âèë‰ø°È™åËØÅ']"));
 			if (prompt.isDisplayed()) {
 				System.out.println( "There is a prompt." );
 				return false;
@@ -160,7 +160,7 @@ public class Action {
 		WebElement message = null;
 		
 		try {
-			message = driver.findElement(By.xpath("//*[text()='∑¢ÀÕ≥…π¶']"));
+			message = driver.findElement(By.xpath("//*[text()='ÂèëÈÄÅÊàêÂäü']"));
 		} catch (NoSuchElementException e) {
 			System.out.println( "An exception#2 happened: " + e.getMessage() );
 			return false;
@@ -169,16 +169,16 @@ public class Action {
 		return message.isDisplayed();
 	}
 	
-	public static boolean verify(String expected) {
+	public boolean verify(String expected) {
 		return driver.findElement(
 			By.xpath("//*[@title='" + expected + "' and contains(@class, 'selected')]")).isDisplayed();
 	}
 	
-	public static void logout() {
-		driver.findElement(By.xpath("//a[text()='ÕÀ≥ˆ']")).click();
+	public void logout() {
+		driver.findElement(By.xpath("//a[text()='ÈÄÄÂá∫']")).click();
 	}
 	
-	public static void close() {
+	public void close() {
 		driver.quit();
 	}
 }

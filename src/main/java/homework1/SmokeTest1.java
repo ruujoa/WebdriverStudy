@@ -15,8 +15,8 @@ public class SmokeTest1 {
 	@Test
 	public void toInbox() {
 		Action.login("ruujoa1982", "luyao1982");
-		Action.to("ÊÕ¼şÏä");
-		Assert.assertTrue(Action.verify("ÊÕ¼şÏä"));
+		Action.to("æ”¶ä»¶ç®±");
+		Assert.assertTrue(Action.verify("æ”¶ä»¶ç®±"));
 		Action.checkMail("test", 0);
 		Assert.assertTrue(Action.verify("test"));
 		Action.logout();

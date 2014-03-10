@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [HomeWork_Two]">
+<suite name="Failed suite [FireflyAutomation]">
   <parameter name="username" value="ruujoa1982"/>
-  <parameter name="browsersToExclude" value="safari"/>
   <parameter name="where" value="已发送"/>
   <parameter name="password" value="luyao1982"/>
   <parameter name="url" value="http://www.126.com"/>
-  <test name="SmokeTest(failed)">
+  <test name="Practice1(failed)">
     <parameter name="username" value="ruujoa1982"/>
-    <parameter name="browsersToExclude" value="safari"/>
     <parameter name="where" value="已发送"/>
     <parameter name="password" value="luyao1982"/>
     <parameter name="url" value="http://www.126.com"/>
     <classes>
       <class name="homework2.SmokeTest">
         <methods>
-          <include name="test" invocation-numbers="0"/>
+          <include name="test"/>
           <include name="start"/>
-          <include name="end"/>
         </methods>
       </class> <!-- homework2.SmokeTest -->
     </classes>
-  </test> <!-- SmokeTest(failed) -->
-</suite> <!-- Failed suite [HomeWork_Two] -->
+  </test> <!-- Practice1(failed) -->
+</suite> <!-- Failed suite [FireflyAutomation] -->

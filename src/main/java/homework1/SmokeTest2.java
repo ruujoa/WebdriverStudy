@@ -26,8 +26,8 @@ public class SmokeTest2 {
 		Assert.assertTrue(Action.sendMail("test", 
 				"This is a test mail for studying Selenium WebDriver", 
 				recipients));
-		Action.to("ÒÑ·¢ËÍ");
-		Assert.assertTrue(Action.verify("ÒÑ·¢ËÍ"));
+		Action.to("å·²å‘é€");
+		Assert.assertTrue(Action.verify("å·²å‘é€"));
 		Action.logout();
 	}
 	

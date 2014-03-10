@@ -1,0 +1,12 @@
+<suite name="HomeWork_Two" >
+  <test name="SmokeTest" preserve-order="true" >
+  	<parameter name="url" value="http://www.126.com" />
+  	<parameter name="username" value="ruujoa1982" />
+  	<parameter name="password" value="luyao1982" />
+  	<parameter name="where" value="已发送" />
+  	<parameter name="browsersToExclude" value="safari" />
+	<classes>			
+	  <class name="homework2.SmokeTest" />
+	</classes>
+  </test> 	
+</suite>

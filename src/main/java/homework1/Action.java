@@ -89,12 +89,12 @@ public class Action {
 	public static boolean sendMail(String title, String content, List<String> recipients) {
 		Actions actions = new Actions(driver);
 		driver.findElement(By
-			.xpath("//*[text()='Ğ´ ĞÅ']"))
+			.xpath("//*[text()='å†™ ä¿¡']"))
 			.click();
 		
 		for (String recipient : recipients) {
 			driver.findElement(By
-					.xpath("//a[text()='ÊÕ¼şÈË']/following-sibling::div/descendant::input[last()]"))
+					.xpath("//a[text()='æ”¶ä»¶äºº']/following-sibling::div/descendant::input[last()]"))
 					.sendKeys(recipient);
 			sleep(2000);
 			actions.sendKeys(Keys.TAB).perform();
@@ -103,7 +103,7 @@ public class Action {
 		sleep(2000);
 		
 		driver.findElement(By
-			.xpath("//*[text()='Ö÷¡¡Ìâ']/following-sibling::div/descendant::input"))
+			.xpath("//*[text()='ä¸»ã€€é¢˜']/following-sibling::div/descendant::input"))
 			.sendKeys(title);
 		
 		sleep(2000);
@@ -113,14 +113,14 @@ public class Action {
 		sleep(2000);
 		try {
 			driver.findElement(By
-					.xpath("//span[contains(text(), '·¢ ËÍ') and parent::div[@tabindex=2]]"))
+					.xpath("//span[contains(text(), 'å‘ é€') and parent::div[@tabindex=2]]"))
 					.click();
 		} catch (NoSuchElementException e) {
 			return false;
 		}
 		
 		try {
-			WebElement prompt = driver.findElement(By.xpath("//div[text()='·¢ĞÅÑéÖ¤']"));
+			WebElement prompt = driver.findElement(By.xpath("//div[text()='å‘ä¿¡éªŒè¯']"));
 			if (prompt.isDisplayed()) {
 				System.out.println( "There is a prompt." );
 				return false;
@@ -134,7 +134,7 @@ public class Action {
 		WebElement message = null;
 		
 		try {
-			message = driver.findElement(By.xpath("//*[text()='·¢ËÍ³É¹¦']"));
+			message = driver.findElement(By.xpath("//*[text()='å‘é€æˆåŠŸ']"));
 		} catch (NoSuchElementException e) {
 			System.out.println( "An exception#2 happened: " + e.getMessage() );
 			return false;
@@ -149,7 +149,7 @@ public class Action {
 	}
 	
 	public static void logout() {
-		driver.findElement(By.xpath("//a[text()='ÍË³ö']")).click();
+		driver.findElement(By.xpath("//a[text()='é€€å‡º']")).click();
 	}
 	
 	public static void close() {
