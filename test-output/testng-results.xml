@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_Two" duration-ms="22965" started-at="2014-03-10T03:47:15Z" finished-at="2014-03-10T03:47:38Z">
+  <suite name="HomeWork_Two" duration-ms="18141" started-at="2014-03-10T06:50:11Z" finished-at="2014-03-10T06:50:29Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="22965" started-at="2014-03-10T03:47:15Z" finished-at="2014-03-10T03:47:38Z">
+    <test name="SmokeTest" duration-ms="18141" started-at="2014-03-10T06:50:11Z" finished-at="2014-03-10T06:50:29Z">
       <class name="homework2.SmokeTest">
-        <test-method status="PASS" signature="start(java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@7f1a4c5e]" name="start" is-config="true" duration-ms="16444" started-at="2014-03-10T11:47:15Z" finished-at="2014-03-10T11:47:31Z">
+        <test-method status="PASS" signature="start(java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@645b3488]" name="start" is-config="true" duration-ms="10069" started-at="2014-03-10T14:50:11Z" finished-at="2014-03-10T14:50:21Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@7f1a4c5e]" name="test" duration-ms="5771" started-at="2014-03-10T11:47:31Z" finished-at="2014-03-10T11:47:37Z">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@645b3488]" name="test" duration-ms="6718" started-at="2014-03-10T14:50:21Z" finished-at="2014-03-10T14:50:28Z">
           <params>
             <param index="0">
               <value>
@@ -37,14 +37,14 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[ÒÑ·¢ËÍ]]>
+                <![CDATA[å·²å‘é€]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@7f1a4c5e]" name="end" is-config="true" duration-ms="740" started-at="2014-03-10T11:47:37Z" finished-at="2014-03-10T11:47:38Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@645b3488]" name="end" is-config="true" duration-ms="1333" started-at="2014-03-10T14:50:28Z" finished-at="2014-03-10T14:50:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

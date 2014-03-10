@@ -89,7 +89,10 @@ public class Action {
 		driver.findElement(By.xpath(props.getProperty("PasswordInput"))).clear();
 		driver.findElement(By.xpath(props.getProperty("PasswordInput"))).sendKeys(password);
 		driver.findElement(By.xpath(props.getProperty("LoginButton"))).click();
-		wait.waitForTitleIsDisplayed(props.getProperty("MainTitle"), Integer.parseInt(props.getProperty("timeout")));
+		wait.waitForTitleIsDisplayed(
+			new String( props.getProperty("MainTitle") ), 
+			Integer.parseInt(props.getProperty("timeout")));
+		
 	}
 	
 	public void to(String where) {
