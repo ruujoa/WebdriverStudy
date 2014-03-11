@@ -22,6 +22,11 @@ public class Wait {
 			this.convert(locator))));
 	}
 	
+	public void waitForElementIsVisible(String locator, int timeout) {
+		(new WebDriverWait(driver, timeout)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+			this.convert(locator))));
+	}
+	
 	public void waitForElementIsEnable(String locator, int timeout){
 		(new WebDriverWait(driver, timeout)).until(ExpectedConditions.elementToBeClickable(By.xpath(
 			this.convert(locator))));
@@ -41,7 +46,7 @@ public class Wait {
 	}
 	
 	
-	private String convert(String toConvert) {
+	public String convert(String toConvert) {
 		String result = "";
 		try {
 			result = new String(toConvert.getBytes("ISO-8859-1"), "UTF-8");

@@ -24,6 +24,7 @@ public class Action {
 	private String projectpath = System.getProperty("user.dir");
 	private Properties props = null; 
 	private Wait wait = null;
+	private String page_count = "";
 	
 	public Action() {
 		props = new Properties();
@@ -36,6 +37,7 @@ public class Action {
 		}
 	}
 	
+	/*
 	private void sleep(long milliseconds) {
 		try {
 			Thread.sleep(milliseconds);
@@ -43,6 +45,7 @@ public class Action {
 			e.printStackTrace();
 		}
 	}
+	*/
 	
 	public void init(String URL) {
 		Random random = new Random(System.currentTimeMillis());
@@ -102,54 +105,82 @@ public class Action {
 	}
 	
 	public int checkCountOfMails() {
-		return driver.findElements(By
-			.xpath(props.getProperty("CountOfHaveBeenSent"))).size() - 1;
+		int count = 0;
+		page_count = driver.findElement(By
+			.xpath(props.getProperty("PageNumber"))).getText();
+		int index = page_count.lastIndexOf("/");
+		page_count = page_count.substring(index+1);
+		
+		for (int i = 0; i < Integer.parseInt(page_count)-1; i++) {
+			List<WebElement> nexts = driver.findElements(By.xpath(
+					wait.convert(props.getProperty("NextPageLink"))
+					));
+			WebElement next = nexts.get(nexts.size()-1);
+			next.click();
+			wait.waitFor(2000);
+			count = driver.findElements(By
+					.xpath(props.getProperty("CountOfHaveBeenSent"))).size();
+		}
+		return count;
 	}
 	
 	public int getCountFromPage() {
-		return Integer.parseInt(driver.findElements(By
-				.xpath(props.getProperty("CountOfHaveBeenSent")))
-				.get(0)
-				.getText()
-				.replaceAll("\\D+", "")
-				.trim());
+		int count = 0;
+		
+		for (int i = 0; i < Integer.parseInt(page_count); i++) {
+			List<WebElement> nexts = driver.findElements(By.xpath(
+					wait.convert(props.getProperty("NextPageLink"))
+					));
+			WebElement next = nexts.get(nexts.size()-1);
+			List<WebElement> numbers = driver.findElements(By
+				.xpath(props.getProperty("CountOfMails")));
+			for (int j = 0; j < numbers.size(); j++) {
+				count += Integer.parseInt( 
+					numbers.get(j).getText()
+					.replaceAll("\\D+", ""));
+			}
+			next.click();
+			wait.waitFor(2000);
+		}
+		return count;
 	}
+	
 	
 	public boolean sendMail(String title, String content, List<String> recipients) {
 		Actions actions = new Actions(driver);
+		wait.waitForElementIsVisible(props.getProperty("ButtonOfWritingMail"), 10);
 		driver.findElement(By
-			.xpath("//*[text()='写 信']"))
+			.xpath(wait.convert(props.getProperty("ButtonOfWritingMail"))))
 			.click();
 		
 		for (String recipient : recipients) {
 			driver.findElement(By
-					.xpath("//a[text()='收件人']/following-sibling::div/descendant::input[last()]"))
-					.sendKeys(recipient);
-			sleep(2000);
-			actions.sendKeys(Keys.TAB).perform();
+					.xpath(wait.convert(props.getProperty("RecipientsInput"))))
+					.sendKeys(recipient + ";");
+			wait.waitFor(2000);
 		}
-		
-		sleep(2000);
+		actions.sendKeys(Keys.TAB).perform();
+		wait.waitFor(2000);
 		
 		driver.findElement(By
-			.xpath("//*[text()='主　题']/following-sibling::div/descendant::input"))
+			.xpath(wait.convert(props.getProperty("SubjectInput"))))
 			.sendKeys(title);
 		
-		sleep(2000);
+		wait.waitFor(2000);
 		actions.sendKeys(Keys.TAB).perform();
-		sleep(2000);
+		wait.waitFor(2000);
 		actions.sendKeys(content).perform();
-		sleep(2000);
+		wait.waitFor(2000);
 		try {
 			driver.findElement(By
-					.xpath("//span[contains(text(), '发 送') and parent::div[@tabindex=2]]"))
+					.xpath(wait.convert(props.getProperty("SendButton"))))
 					.click();
 		} catch (NoSuchElementException e) {
 			return false;
 		}
 		
 		try {
-			WebElement prompt = driver.findElement(By.xpath("//div[text()='发信验证']"));
+			WebElement prompt = driver.findElement(By.xpath(wait.convert(props.getProperty("FlagToValidate"))));
 			if (prompt.isDisplayed()) {
 				System.out.println( "There is a prompt." );
 				return false;
@@ -158,12 +189,12 @@ public class Action {
 			System.out.println( "An exception#1 happened: " + e.getMessage() );
 		}
 		
-		sleep(2000);
+		wait.waitFor(2000);
 		
 		WebElement message = null;
 		
 		try {
-			message = driver.findElement(By.xpath("//*[text()='发送成功']"));
+			message = driver.findElement(By.xpath(wait.convert(props.getProperty("FlagOfSuccess"))));
 		} catch (NoSuchElementException e) {
 			System.out.println( "An exception#2 happened: " + e.getMessage() );
 			return false;

@@ -12,11 +12,13 @@ import org.testng.annotations.Test;
 public class SmokeTest {
 	
 	private List<BrowsersType> excludes = null;
+//	private List<String> recipients = null;
 	private Action action = new Action();
 	
 	@BeforeClass
 	@Parameters({"url", "browsersToExclude"})
 	public void start(String url, String excludes) {
+//		recipients = new ArrayList<String>();
 	    this.excludes = new ArrayList<BrowsersType>();
 	    if ( excludes.indexOf(',') > -1 ) {
 	    	String[] items = excludes.split(",");
@@ -34,9 +36,17 @@ public class SmokeTest {
 	public void test(String username, String password
 		, String where) {
 		action.login(username, password);
+//		recipients.add("ruujoa1982@126.com");
+//		for (int i = 1; i < 21; i++) {
+//			Assert.assertTrue( action.sendMail("test"+i, "This is a test mail for " +
+//				"studying Selenium WebDriver", recipients) );
+//		}
 		action.to(where);
-		Assert.assertEquals( action.checkCountOfMails(), 
-				action.getCountFromPage() );
+		int actual = action.checkCountOfMails();
+		action.to(where);
+		int expected = action.getCountFromPage();
+		Assert.assertEquals( actual, 
+				expected );
 	}
 	
 	@AfterClass
