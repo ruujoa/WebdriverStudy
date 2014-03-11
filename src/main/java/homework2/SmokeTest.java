@@ -51,6 +51,7 @@ public class SmokeTest {
 	
 	@AfterClass
 	public void end() {
+		action.logout();
 		action.close();
 	}
 }

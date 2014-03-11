@@ -111,13 +111,15 @@ public class Action {
 		int index = page_count.lastIndexOf("/");
 		page_count = page_count.substring(index+1);
 		
-		for (int i = 0; i < Integer.parseInt(page_count)-1; i++) {
+		for (int i = 0; i < Integer.parseInt(page_count); i++) {
 			List<WebElement> nexts = driver.findElements(By.xpath(
 					wait.convert(props.getProperty("NextPageLink"))
 					));
-			WebElement next = nexts.get(nexts.size()-1);
-			next.click();
-			wait.waitFor(2000);
+			if ( 0 < nexts.size() ) {
+				WebElement next = nexts.get(nexts.size()-1);
+				next.click();
+				wait.waitFor(2000);
+			}
 			count = driver.findElements(By
 					.xpath(props.getProperty("CountOfHaveBeenSent"))).size();
 		}
@@ -131,7 +133,7 @@ public class Action {
 			List<WebElement> nexts = driver.findElements(By.xpath(
 					wait.convert(props.getProperty("NextPageLink"))
 					));
-			WebElement next = nexts.get(nexts.size()-1);
+			
 			List<WebElement> numbers = driver.findElements(By
 				.xpath(props.getProperty("CountOfMails")));
 			for (int j = 0; j < numbers.size(); j++) {
@@ -139,8 +141,11 @@ public class Action {
 					numbers.get(j).getText()
 					.replaceAll("\\D+", ""));
 			}
-			next.click();
-			wait.waitFor(2000);
+			if ( 0 < nexts.size() ) {
+				WebElement next = nexts.get(nexts.size()-1);
+				next.click();
+				wait.waitFor(2000);
+			}
 		}
 		return count;
 	}

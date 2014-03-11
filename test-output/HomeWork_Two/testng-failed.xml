@@ -17,6 +17,7 @@
         <methods>
           <include name="test" invocation-numbers="0"/>
           <include name="start"/>
+          <include name="end"/>
         </methods>
       </class> <!-- homework2.SmokeTest -->
     </classes>
