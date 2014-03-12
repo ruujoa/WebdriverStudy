@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_Two" duration-ms="42876" started-at="2014-03-12T06:28:11Z" finished-at="2014-03-12T06:28:54Z">
+  <suite name="HomeWork_Two" duration-ms="32910" started-at="2014-03-12T06:41:58Z" finished-at="2014-03-12T06:42:31Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="42876" started-at="2014-03-12T06:28:11Z" finished-at="2014-03-12T06:28:54Z">
+    <test name="SmokeTest" duration-ms="32910" started-at="2014-03-12T06:41:58Z" finished-at="2014-03-12T06:42:31Z">
       <class name="homework2.SmokeTest">
-        <test-method status="PASS" signature="start(java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@53c7a917]" name="start" is-config="true" duration-ms="7591" started-at="2014-03-12T14:28:11Z" finished-at="2014-03-12T14:28:19Z">
+        <test-method status="PASS" signature="start(java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@53c7a917]" name="start" is-config="true" duration-ms="9072" started-at="2014-03-12T14:41:58Z" finished-at="2014-03-12T14:42:08Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@53c7a917]" name="test" duration-ms="31673" started-at="2014-03-12T14:28:19Z" finished-at="2014-03-12T14:28:51Z">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@53c7a917]" name="test" duration-ms="20876" started-at="2014-03-12T14:42:08Z" finished-at="2014-03-12T14:42:28Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@53c7a917]" name="end" is-config="true" duration-ms="3592" started-at="2014-03-12T14:28:51Z" finished-at="2014-03-12T14:28:54Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@53c7a917]" name="end" is-config="true" duration-ms="2942" started-at="2014-03-12T14:42:28Z" finished-at="2014-03-12T14:42:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->

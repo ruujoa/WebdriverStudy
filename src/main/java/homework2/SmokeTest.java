@@ -13,10 +13,12 @@ public class SmokeTest {
 	
 	private List<BrowsersType> excludes = null;
 	private Action action = new Action();
+	private long now = 0;
 	
 	@BeforeClass
 	@Parameters({"url", "browsersToExclude"})
 	public void start(String url, String excludes) {
+		now = System.currentTimeMillis();
 	    this.excludes = new ArrayList<BrowsersType>();
 	    if ( excludes.indexOf(',') > -1 ) {
 	    	String[] items = excludes.split(",");
@@ -46,5 +48,8 @@ public class SmokeTest {
 	public void end() {
 		action.logout();
 		action.close();
+		System.out.println( "This test costs " 
+			+ (System.currentTimeMillis() - now)/1000
+			+ " seconds." );
 	}
 }
