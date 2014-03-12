@@ -37,16 +37,6 @@ public class Action {
 		}
 	}
 	
-	/*
-	private void sleep(long milliseconds) {
-		try {
-			Thread.sleep(milliseconds);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
-	*/
-	
 	public void init(String URL) {
 		Random random = new Random(System.currentTimeMillis());
 		List<BrowsersType> list = new ArrayList<BrowsersType>(Arrays.asList(BrowsersType.values()));
