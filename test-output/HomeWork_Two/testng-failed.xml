@@ -15,9 +15,11 @@
     <classes>
       <class name="homework2.SmokeTest">
         <methods>
+          <include name="prepare"/>
           <include name="test" invocation-numbers="0"/>
           <include name="start"/>
           <include name="end"/>
+          <include name="log"/>
         </methods>
       </class> <!-- homework2.SmokeTest -->
     </classes>
