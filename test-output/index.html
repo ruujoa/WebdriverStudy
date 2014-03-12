@@ -144,7 +144,7 @@
 &lt;suite name=&quot;HomeWork_Two&quot;&gt;
   &lt;test name=&quot;SmokeTest&quot;&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;ruujoa1982&quot;/&gt;
-    &lt;parameter name=&quot;browsersToExclude&quot; value=&quot;safari&quot;/&gt;
+    &lt;parameter name=&quot;browsersToExclude&quot; value=&quot;safari,firefox&quot;/&gt;
     &lt;parameter name=&quot;where&quot; value=&quot;已发送&quot;/&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;luyao1982&quot;/&gt;
     &lt;parameter name=&quot;url&quot; value=&quot;http://www.126.com&quot;/&gt;
@@ -193,12 +193,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'homework2.SmokeTest')
-data.setCell(0, 3, 21361);
+data.setCell(0, 3, 29719);
 window.suiteTableData['HomeWork_Two']= { tableData: data, tableDiv: 'times-div-HomeWork_Two'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-HomeWork_Two">
               </div> <!-- times-div-HomeWork_Two -->
             </div> <!-- times-div -->
@@ -226,24 +226,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">homework2.SmokeTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">prepare(safari)</span>
+                <span class="method-name">prepare(safari,firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">start(http://www.126.com)</span>
-                <span class="method-start">80 ms</span>
+                <span class="method-start">100 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">test(ruujoa1982, luyao1982, 已发送)</span>
-                <span class="method-start">16849 ms</span>
+                <span class="method-start">3675 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">end</span>
-                <span class="method-start">38210 ms</span>
+                <span class="method-start">33394 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">log</span>
-                <span class="method-start">39821 ms</span>
+                <span class="method-start">36526 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

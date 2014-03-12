@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_Two" duration-ms="39831" started-at="2014-03-12T08:39:16Z" finished-at="2014-03-12T08:39:56Z">
+  <suite name="HomeWork_Two" duration-ms="36526" started-at="2014-03-12T08:58:57Z" finished-at="2014-03-12T08:59:33Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="39831" started-at="2014-03-12T08:39:16Z" finished-at="2014-03-12T08:39:56Z">
+    <test name="SmokeTest" duration-ms="36526" started-at="2014-03-12T08:58:57Z" finished-at="2014-03-12T08:59:33Z">
       <class name="homework2.SmokeTest">
-        <test-method status="PASS" signature="prepare(java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="prepare" is-config="true" duration-ms="80" started-at="2014-03-12T16:39:16Z" finished-at="2014-03-12T16:39:16Z">
+        <test-method status="PASS" signature="prepare(java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="prepare" is-config="true" duration-ms="90" started-at="2014-03-12T16:58:57Z" finished-at="2014-03-12T16:58:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[safari]]>
+                <![CDATA[safari,firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepare -->
-        <test-method status="PASS" signature="start(java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="start" is-config="true" duration-ms="16769" started-at="2014-03-12T16:39:16Z" finished-at="2014-03-12T16:39:33Z">
+        <test-method status="PASS" signature="start(java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="start" is-config="true" duration-ms="3575" started-at="2014-03-12T16:58:57Z" finished-at="2014-03-12T16:59:01Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="test" duration-ms="21361" started-at="2014-03-12T16:39:33Z" finished-at="2014-03-12T16:39:54Z">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:homework2.SmokeTest@6b776b55]" name="test" duration-ms="29719" started-at="2014-03-12T16:59:01Z" finished-at="2014-03-12T16:59:30Z">
           <params>
             <param index="0">
               <value>
@@ -50,11 +50,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@6b776b55]" name="end" is-config="true" duration-ms="1611" started-at="2014-03-12T16:39:54Z" finished-at="2014-03-12T16:39:56Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework2.SmokeTest@6b776b55]" name="end" is-config="true" duration-ms="3132" started-at="2014-03-12T16:59:30Z" finished-at="2014-03-12T16:59:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-        <test-method status="PASS" signature="log()[pri:0, instance:homework2.SmokeTest@6b776b55]" name="log" is-config="true" duration-ms="0" started-at="2014-03-12T16:39:56Z" finished-at="2014-03-12T16:39:56Z">
+        <test-method status="PASS" signature="log()[pri:0, instance:homework2.SmokeTest@6b776b55]" name="log" is-config="true" duration-ms="0" started-at="2014-03-12T16:59:33Z" finished-at="2014-03-12T16:59:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- log -->
