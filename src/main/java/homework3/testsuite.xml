@@ -1,0 +1,10 @@
+<suite name="HomeWork_Three" >
+  <test name="SmokeTest" preserve-order="true" >
+  	<parameter name="url1" value="http://jqueryui.com/slider/" />
+  	<parameter name="url2" value="http://www.yixun.com" />
+	<classes>			
+	  <class name="homework3.SmokeTest" />
+	  <class name="homework3.SimpleTest" />
+	</classes>
+  </test> 	
+</suite>

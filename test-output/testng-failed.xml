@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [HomeWork_Two]">
-  <parameter name="username" value="ruujoa1982"/>
-  <parameter name="browsersToExclude" value="safari"/>
-  <parameter name="where" value="已发送"/>
-  <parameter name="password" value="luyao1982"/>
-  <parameter name="url" value="http://www.126.com"/>
+<suite name="Failed suite [HomeWork_Three]">
+  <parameter name="url" value="http://jqueryui.com/slider/"/>
   <test name="SmokeTest(failed)">
-    <parameter name="username" value="ruujoa1982"/>
-    <parameter name="browsersToExclude" value="safari"/>
-    <parameter name="where" value="已发送"/>
-    <parameter name="password" value="luyao1982"/>
-    <parameter name="url" value="http://www.126.com"/>
+    <parameter name="url" value="http://jqueryui.com/slider/"/>
     <classes>
-      <class name="homework2.SmokeTest">
+      <class name="homework3.SmokeTest">
         <methods>
-          <include name="prepare"/>
-          <include name="test" invocation-numbers="0"/>
-          <include name="start"/>
           <include name="end"/>
-          <include name="log"/>
+          <include name="test"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- homework2.SmokeTest -->
+      </class> <!-- homework3.SmokeTest -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
-</suite> <!-- Failed suite [HomeWork_Two] -->
+</suite> <!-- Failed suite [HomeWork_Three] -->
