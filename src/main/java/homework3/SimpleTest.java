@@ -17,6 +17,7 @@ private Action action = new Action();
 	@Test
 	public void test() {
 		action.scroll();
+		action.dragAndDrop2();
 	}
 	
 	@AfterClass

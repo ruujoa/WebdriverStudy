@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 12 16:13:52 CST 2014</td>
+<td>Started on:</td><td>Wed Mar 19 09:06:25 CST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (72 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (40 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='homework2.SmokeTest.prepare()'><b>prepare</b><br>Test class: homework2.SmokeTest</td>
+<td title='homework3.SimpleTest.start()'><b>start</b><br>Test class: homework3.SimpleTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browsersToExclude&apos; is required by @Configuration on method prepare but has not been marked @Optional or defined
-in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite.xml
+Parameter &apos;url2&apos; is required by @Configuration on method start but has not been marked @Optional or defined
+in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-124601168\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:358)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -98,17 +100,19 @@ in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1871350578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1871350578'><pre>org.testng.TestNGException: 
-Parameter &apos;browsersToExclude&apos; is required by @Configuration on method prepare but has not been marked @Optional or defined
-in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite.xml
+</pre></div><a href='#' onClick='toggleBox("stack-trace1780643722", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1780643722'><pre>org.testng.TestNGException: 
+Parameter &apos;url2&apos; is required by @Configuration on method start but has not been marked @Optional or defined
+in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-124601168\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:358)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:199)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
-	at org.testng.TestRunner.run(TestRunner.java:609)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -123,7 +127,7 @@ in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>0</td>
-<td>null</td></tr>
+<td>homework3.SimpleTest@1e3c6543</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -133,20 +137,10 @@ in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='homework2.SmokeTest.start()'><b>start</b><br>Test class: homework2.SmokeTest</td>
+<td title='homework3.SimpleTest.end()'><b>end</b><br>Test class: homework3.SimpleTest</td>
 <td></td>
 <td>0</td>
-<td>homework2.SmokeTest@65b164f2</td></tr>
-<tr>
-<td title='homework2.SmokeTest.end()'><b>end</b><br>Test class: homework2.SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>homework2.SmokeTest@65b164f2</td></tr>
-<tr>
-<td title='homework2.SmokeTest.log()'><b>log</b><br>Test class: homework2.SmokeTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
+<td>homework3.SimpleTest@1e3c6543</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -156,61 +150,10 @@ in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='homework2.SmokeTest.test()'><b>test</b><br>Test class: homework2.SmokeTest</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;username&apos; is required by @Test on method test but has not been marked @Optional or defined
-in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:358)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1108162919", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1108162919'><pre>org.testng.TestNGException: 
-Parameter &apos;username&apos; is required by @Test on method test but has not been marked @Optional or defined
-in C:\Users\luyao\AppData\Local\Temp\testng-eclipse-465516786\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:155)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:358)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:450)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
+<td title='homework3.SimpleTest.test()'><b>test</b><br>Test class: homework3.SimpleTest</td>
+<td></td>
 <td>0</td>
-<td>homework2.SmokeTest@65b164f2</td></tr>
+<td>homework3.SimpleTest@1e3c6543</td></tr>
 </table><p>
 </body>
 </html>

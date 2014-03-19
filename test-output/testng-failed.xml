@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [HomeWork_Three]">
-  <parameter name="url" value="http://jqueryui.com/slider/"/>
+  <parameter name="url1" value="http://jqueryui.com/slider/"/>
+  <parameter name="url2" value="http://www.yixun.com"/>
   <test name="SmokeTest(failed)">
-    <parameter name="url" value="http://jqueryui.com/slider/"/>
+    <parameter name="url1" value="http://jqueryui.com/slider/"/>
+    <parameter name="url2" value="http://www.yixun.com"/>
     <classes>
-      <class name="homework3.SmokeTest">
+      <class name="homework3.SimpleTest">
         <methods>
-          <include name="end"/>
           <include name="test"/>
           <include name="start"/>
         </methods>
-      </class> <!-- homework3.SmokeTest -->
+      </class> <!-- homework3.SimpleTest -->
     </classes>
   </test> <!-- SmokeTest(failed) -->
 </suite> <!-- Failed suite [HomeWork_Three] -->

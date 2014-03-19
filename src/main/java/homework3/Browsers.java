@@ -2,7 +2,6 @@ package homework3;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,7 +33,6 @@ public class Browsers {
 					firefoxprofile.setPreference("webdriver.accept.untrusted.certs", "true"); 
 					firefoxprofile.setPreference("extensions.firebug.currentVersion", "1.12.1");
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				driver = new FirefoxDriver(firefoxprofile);
@@ -56,17 +54,16 @@ public class Browsers {
 		    	} else {
 		    		System.setProperty("webdriver.chrome.driver", projectpath+"/tool/chromedriver_mac"); 
 		    	}
-				caps = DesiredCapabilities.chrome();
-				caps.setCapability("chrome.switches",Arrays.asList("--start-maximized"));  //最大化browser
-				//capabilities.setCapability("chrome.switches", Arrays.asList("--proxy-server=http://your-proxy-domain:4443")); //设置代理
-				driver = new ChromeDriver(caps);
+		    	
+				driver = new ChromeDriver();
 				break;
 		    case safari:
 		    	caps = DesiredCapabilities.safari();
+		    	if ( OS_NAME.toUpperCase().contains("WINDOWS") )
+		    		caps.setCapability("*safari", "D:\\Program Files (x86)\\Safari\\Safari.exe");
 		    	driver = new SafariDriver(caps);
 		    	break;
 		}
-		
-			
+		driver.manage().window().maximize();	
 	}
 }

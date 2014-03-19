@@ -46,14 +46,16 @@ public class Action {
 		now = System.currentTimeMillis();
 	    excludes = new ArrayList<BrowsersType>();
 	    String toExclude = props.getProperty("toExclude");
-	    if ( toExclude.indexOf(',') > -1 ) {
-	    	String[] items = toExclude.split(",");
-	    	for (int i = 0; i < items.length; i++) {
-				excludes.add(BrowsersType.valueOf(items[i].trim()));
-			}
-	    } else if ( toExclude != null && !toExclude.isEmpty() ) {
-	    	excludes.add(BrowsersType.valueOf(toExclude.trim()));
-	    }
+	    if ( toExclude != null && toExclude.isEmpty() ) {
+	    	if ( toExclude.indexOf(',') > -1 ) {
+		    	String[] items = toExclude.split(",");
+		    	for (int i = 0; i < items.length; i++) {
+		    		excludes.add(BrowsersType.valueOf(items[i].trim()));
+				}
+		    } else {
+		    	excludes.add(BrowsersType.valueOf(toExclude.trim()));
+		    }
+		}
 	}
 	
 	public void init(String URL) {
@@ -64,8 +66,11 @@ public class Action {
 		if ( !OS_NAME.toUpperCase().contains("WINDOWS") ) {
 			list.remove(BrowsersType.ie);
 		}
+		if ( OS_NAME.toUpperCase().contains("LINUX") ) {
+			list.remove(BrowsersType.safari);
+		}
 		int i = 0; 
-		if (excludes != null) {
+		if (excludes != null && excludes.size() > 0) {
 			while(true) {
 				i = random.nextInt(BrowsersType.values().length);
 				if (!excludes.contains(BrowsersType.values()[i])) break;	
@@ -74,6 +79,7 @@ public class Action {
 			i = random.nextInt(list.size());
 		}
 		browser = new Browsers(list.get(i));
+		logger.info("Test on " + list.get(i).name() + " this time.");
 		driver = browser.driver;
 		wait = new Wait(driver);
 		driver.get(URL);
@@ -119,6 +125,14 @@ public class Action {
 	public void close() {
 		driver.quit();
 	}
+	
+    public void dragAndDrop2(){
+        driver.get("http://reg.163.com/agreement.shtml");
+        int numberOfPixelsToDragTheScrollbarDown = 500;
+        Actions dragger = new Actions(driver);
+        dragger.moveToElement(driver.findElement(By.xpath("//p[contains(text(),'网易通行证服务条款')]"))).clickAndHold().moveByOffset(  0,numberOfPixelsToDragTheScrollbarDown).release().perform();
+        wait.waitFor(5000);
+    }
 	
 	public void clear() {
 		logger.info( "The test ends..." );

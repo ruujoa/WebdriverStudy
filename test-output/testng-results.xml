@@ -1,34 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="HomeWork_Three" duration-ms="73903" started-at="2014-03-18T08:41:40Z" finished-at="2014-03-18T08:42:54Z">
+  <suite name="HomeWork_Three" duration-ms="28827" started-at="2014-03-19T02:18:13Z" finished-at="2014-03-19T02:18:41Z">
     <groups>
     </groups>
-    <test name="SmokeTest" duration-ms="73903" started-at="2014-03-18T08:41:40Z" finished-at="2014-03-18T08:42:54Z">
-      <class name="homework3.SmokeTest">
-        <test-method status="PASS" signature="start(java.lang.String)[pri:0, instance:homework3.SmokeTest@7b513d1e]" name="start" is-config="true" duration-ms="17544" started-at="2014-03-18T16:41:40Z" finished-at="2014-03-18T16:41:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://jqueryui.com/slider/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- start -->
-        <test-method status="PASS" signature="test()[pri:0, instance:homework3.SmokeTest@7b513d1e]" name="test" duration-ms="37149" started-at="2014-03-18T16:41:58Z" finished-at="2014-03-18T16:42:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework3.SmokeTest@7b513d1e]" name="end" is-config="true" duration-ms="1315" started-at="2014-03-18T16:42:35Z" finished-at="2014-03-18T16:42:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- end -->
-      </class> <!-- homework3.SmokeTest -->
+    <test name="SmokeTest" duration-ms="28827" started-at="2014-03-19T02:18:13Z" finished-at="2014-03-19T02:18:41Z">
       <class name="homework3.SimpleTest">
-        <test-method status="PASS" signature="start(java.lang.String)[pri:0, instance:homework3.SimpleTest@21ce3a26]" name="start" is-config="true" duration-ms="11515" started-at="2014-03-18T16:42:36Z" finished-at="2014-03-18T16:42:48Z">
+        <test-method status="PASS" signature="start(java.lang.String)[pri:0, instance:homework3.SimpleTest@68df6513]" name="start" is-config="true" duration-ms="16395" started-at="2014-03-19T10:18:13Z" finished-at="2014-03-19T10:18:29Z">
           <params>
             <param index="0">
               <value>
@@ -39,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="test()[pri:0, instance:homework3.SimpleTest@21ce3a26]" name="test" duration-ms="5076" started-at="2014-03-18T16:42:48Z" finished-at="2014-03-18T16:42:53Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:homework3.SimpleTest@68df6513]" name="test" duration-ms="11662" started-at="2014-03-19T10:18:29Z" finished-at="2014-03-19T10:18:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="end()[pri:0, instance:homework3.SimpleTest@21ce3a26]" name="end" is-config="true" duration-ms="1278" started-at="2014-03-18T16:42:53Z" finished-at="2014-03-18T16:42:54Z">
+        <test-method status="PASS" signature="end()[pri:0, instance:homework3.SimpleTest@68df6513]" name="end" is-config="true" duration-ms="760" started-at="2014-03-19T10:18:41Z" finished-at="2014-03-19T10:18:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
